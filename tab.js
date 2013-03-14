@@ -33,17 +33,17 @@
 
 		},
 		animate: function(){
-			
+
 		}
 	}
 	/**
 	 * jquery tab
 	 * @param  {[type]}   option   [Object]
 	 * @param  {Function} callback [Function]
-	 * @return {[type]}            [description]
+	 * @return {[type]}            [Object]
 	 */
 	$.fn.tab = function(option,callback){
-		new tab($(this),option,callback);
+		return new tab($(this),option,callback);
 	}
 	/**
 	 * 默认参数
