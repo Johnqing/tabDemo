@@ -1,17 +1,39 @@
 (function($){
-	/**
-	 * tab 类
-	 * @param  {[type]} index [num]
-	 * @param  {[type]} tag   [description]
-	 * @return {[type]}       [description]
-	 */
-	var tab = function (index,tag){
-		this.index = index;
-		this.tag = tag;
+	var tab = function(obj,option,callback){
+		this.callback = (typeof option === 'function') ? option : callback;
+		this.settings = $.extend(defaultConfig, option || {});
+
+		this.items = obj.find("*["+this.settings.hookKey+"="+this.settings.hookItemVal+"]"),
+        this.contens = obj.find("*["+this.settings.hookKey+"="+this.settings.hookContentVal+"]");
+
+		this.init();
 	}
 	tab.prototype = {
 		init: function(){
+			var self = this;
+			if (self.items.length != self.contens.length) {
+	            return false;
+			}
 
+			this._bindEvent();
+		},
+		_bindEvent: function(){
+			var self = this;
+			console.log(self.items);
+
+			self.items.each(function(i){
+				$(this).bind(self.settings.event,function(){
+					console.log(i);
+				})
+				.bind('mouseleave',function(){
+
+				});
+			});
+
+
+		},
+		animate: function(){
+			
 		}
 	}
 	/**
@@ -21,17 +43,7 @@
 	 * @return {[type]}            [description]
 	 */
 	$.fn.tab = function(option,callback){
-		// function is callback
-		callback = (typeof option === 'function') ? option : callback;
-		var settings = $.extend(defaultConfig, option || {});
-
-		var items = $(this).find("*["+settings.hookKey+"="+settings.hookItemVal+"]"),
-            contens = $(this).find("*["+settings.hookKey+"="+settings.hookContentVal+"]");
-			
-        if (items.length != contens.length) {
-            return false;
-		}
-		
+		new tab($(this),option,callback);
 	}
 	/**
 	 * 默认参数
@@ -40,7 +52,7 @@
 	var defaultConfig = {
 	    type: "static",
 	    auto: false,
-	    event: "mouseover",
+	    event: "click",
 	    currClass: "curr",
 	    source: "data-tag",
 		hookKey:"data-widget",
