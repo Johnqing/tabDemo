@@ -6,7 +6,7 @@
 	 * @param  {Function} callback [回调函数]
 	 */
 	var tab = function(obj,option,callback){
-		this.callback = (typeof option === 'function') ? option : callback;
+		this.callback = (typeof option === 'function') ? option : (callback || function(){});
 		this.settings = $.extend(defaultConfig, option || {});
 		this.obj = obj;
 
@@ -124,7 +124,7 @@
 	var defaultConfig = {
 	    type: "static",
 	    auto: false,
-	    event: "click",
+	    event: "mouseover",
 	    currClass: "curr",
 	    source: "data-tag",
 		hookKey:"data-widget",
