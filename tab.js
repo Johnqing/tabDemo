@@ -24,25 +24,22 @@
 			if (self.items.length != self.contens.length) {
 	            return false;
 			}
+			// 默认选中项
+			this.startSelect();
+			// 事件绑定
 			this._bindEvent();
+			// 回调函数
 			this.callback();
 		},
 		/**
 		 * 事件绑定
 		 */
 		_bindEvent: function(){
-			var self = this,
-			curr = self.settings.currClass;
-			console.log(self.items);
+			var self = this;
 
 			self.items.each(function(i){
 				$(this).bind(self.settings.event,function(){
-					var item = self.items.eq(i),
-						left = item.find('h2').offset().left;
-					console.log(left);
-					self.obj.find('.'+curr).removeClass(curr);
-					item.addClass(curr);
-					startMove($('.tab-curr'),{left:left});
+					self.animate(i);
 				})
 				.bind('mouseleave',function(){
 
@@ -54,7 +51,24 @@
 		 * @return {[type]} [number]
 		 */
 		startSelect: function(){
-
+			var self = this;
+			self.animate(self.settings.index);
+		},
+		/**
+		 * 动画
+		 * @param  {[type]} i [number]
+		 * @return 
+		 */
+		animate: function(i){
+			var self = this,
+				curr = self.settings.currClass;
+			var item = self.items.eq(i),
+				left = item.find('h2').offset().left;
+			//addClass
+			self.obj.find('.'+curr).removeClass(curr);
+			item.addClass(curr);
+			//animate
+			startMove($('.tab-curr'),{left:left,speed:self.settings.delay});
 		}
 	}
 	/**
@@ -113,7 +127,7 @@
 	                fn();
 	            }
 	        }
-	    }, 30);
+	    }, json.speed);
 	}
 	/**
 	 * jquery tab
@@ -137,8 +151,7 @@
 		hookKey:"data-widget",
 		hookItemVal: "tab-item",
 		hookContentVal: "tab-content",
-		stay: 5000,
-		delay: 100,
+		delay: 10,
 		threshold:null,
 		mainTimer: null,
 		subTimer: null,
@@ -147,6 +160,8 @@
 	}
 
 })(jQuery);
+
+
 $(function(){
 	$('#hot').tab();
 })
