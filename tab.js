@@ -11,7 +11,7 @@
 		this.obj = obj;
 
 		this.items = obj.find("*["+this.settings.hookKey+"="+this.settings.hookItemVal+"]"),
-        this.contens = obj.find("*["+this.settings.hookKey+"="+this.settings.hookContentVal+"]");
+		this.contens = obj.find("*["+this.settings.hookKey+"="+this.settings.hookContentVal+"]");
 
 		this.init();
 	}
@@ -48,6 +48,13 @@
 
 				});
 			});
+		},
+		/**
+		 * 初始化选中项
+		 * @return {[type]} [number]
+		 */
+		startSelect: function(){
+
 		}
 	}
 	/**
@@ -57,11 +64,11 @@
 	 * @return {[String]}      [字符串]
 	 */
 	var getStyle = function(obj, attr){
-	    if(obj.currentStyle){
-	        return obj.currentStyle[attr];
-	    }else{
-	        return getComputedStyle(obj, false)[attr];
-	    }
+		if(obj.currentStyle){
+			return obj.currentStyle[attr];
+		}else{
+			return getComputedStyle(obj, false)[attr];
+		}
 	}
 	/**
 	 * 运动函数
@@ -122,20 +129,20 @@
 	 * @type {Object}
 	 */
 	var defaultConfig = {
-	    type: "static",
-	    auto: false,
-	    event: "mouseover",
-	    currClass: "curr",
-	    source: "data-tag",
+		type: "static",
+		auto: false,
+		event: "mouseover",
+		currClass: "curr",
+		source: "data-tag",
 		hookKey:"data-widget",
 		hookItemVal: "tab-item",
-	    hookContentVal: "tab-content",
-	    stay: 5000,
-	    delay: 100,
+		hookContentVal: "tab-content",
+		stay: 5000,
+		delay: 100,
 		threshold:null,
-	    mainTimer: null,
-	    subTimer: null,
-	    index: 0,
+		mainTimer: null,
+		subTimer: null,
+		index: 0,
 		compatible:false
 	}
 
