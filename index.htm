@@ -1,0 +1,319 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>滑动门</title>
+<style type="text/css">
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+}
+body {
+	padding: 30px;
+}
+.tabsBox {
+	width: 500px;
+}
+.tabs {
+	width: 500px;
+	height: 25px;
+}
+.tabs li {
+	width: 58px;
+	height: 25px;
+	border-right: 2px solid white;
+	float: left;
+	background: #EBF5F8;
+	font-weight: 700;
+	color: #999;
+	line-height: 25px;
+	text-indent: 3px;
+	list-style: none;
+	position: relative;
+	cursor: pointer;
+}
+.tabs li span {
+	display: none;
+}
+.tabs .cur {
+	cursor: pointer;
+	background: #8DC6D5 !important;
+	color: white !important;
+}
+.tabs .cur span {
+	display: block;
+	width: 1px;
+	height: 1px;
+	border: solid 8px;
+	border-color: #f0f0f0 #fff #fff #fff;
+	position: absolute;
+	top: 20px;
+	left: 32px;
+	overflow: hidden;
+	z-index: -1;
+}
+.cons {
+	width: 466px;
+	height: 250px;
+	padding: 15px;
+	border: 2px solid #8DC6D5;
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+}
+.cons ul li {
+	list-style: none;
+	line-height: 20px;
+}
+.ul_top1 {
+	width: 466px;
+	height: 85px;
+	overflow: hidden;
+}
+.ul_top1 h2 {
+	display: block;
+	background: url(../images/1.gif) no-repeat 10px 0;
+	padding: 0 0 5px 25px;
+	font-size: 14px;
+	font-weight: 700;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ul_top1 h2 a {
+	color: #000;
+}
+.ul_top1 p {
+	width: 466px;
+	height: 54px;
+	overflow: hidden;
+	font-size: 12px;
+	color: #999;
+}
+.ul_top_2 {
+	margin-bottom: 10px;
+}
+.ul_top_2 h2 {
+	background: url(../images/2.gif) no-repeat 0 5px;
+	padding: 5px 0 5px 25px;
+}
+.ul_on_1 {
+	width: 155px;
+	height: 20px;
+	float: left;
+	margin-bottom: 4px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.ul_on_1 a {
+	color: #8DC6D3;
+	text-decoration: none;
+}
+.ul_on_1 a:hover {
+	color: #8DC6D3;
+	text-decoration: underline;
+}
+.hidden {
+	display: none;
+}
+.block {
+	display: block;
+}
+</style>
+</head>
+<body>
+<div class="tabsBox">
+  <ul id="Tabs" class="tabs">
+    <li class="cur">宝贝健康</li>
+    <li>营养美食</li>
+    <li >孕产之家</li>
+    <li>教育心里</li>
+    <li>家庭时间</li>
+  </ul>
+  <div id="TabsCon" class="cons">
+    <ul>
+      <li class="ul_top1">
+        <h2><a href="#">bbb远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。所知要危险。</p>
+      </li>
+      <li class="ul_top1 ul_top_2">
+        <h2><a href="#">远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。</p>
+      </li>
+      <li class="ul_on_1"><a href="#">恶心的标的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标恶心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的心的标题</a></li>
+    </ul>
+    <ul>
+      <li class="ul_top1">
+        <h2><a href="#">jjjkjk远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。所知要危险。</p>
+      </li>
+      <li class="ul_top1 ul_top_2">
+        <h2><a href="#">远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。</p>
+      </li>
+      <li class="ul_on_1"><a href="#">恶心的标的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标恶心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的心的标题</a></li>
+    </ul>
+    <ul>
+      <li class="ul_top1">
+        <h2><a href="#">dfsdf远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。所知要危险。</p>
+      </li>
+      <li class="ul_top1 ul_top_2">
+        <h2><a href="#">远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。</p>
+      </li>
+      <li class="ul_on_1"><a href="#">恶心的标的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标恶心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的心的标题</a></li>
+    </ul>
+    <ul>
+      <li class="ul_top1">
+        <h2><a href="#">2323远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。所知要危险。</p>
+      </li>
+      <li class="ul_top1 ul_top_2">
+        <h2><a href="#">远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。</p>
+      </li>
+      <li class="ul_on_1"><a href="#">恶心的标的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标恶心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的心的标题</a></li>
+    </ul>
+    <ul>
+      <li class="ul_top1">
+        <h2><a href="#">远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。所知要危险。</p>
+      </li>
+      <li class="ul_top1 ul_top_2">
+        <h2><a href="#">远离二手烟、二手烟的二十五的扯淡问答</a></h2>
+        <p>“二手烟”危害较想象大，研究人员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验员说，这项研究目前属小规模实验，需要进一步证实及扩大研究。然而，如果这项研究是正确的话，那么环境吸烟问题远比过去所知。</p>
+      </li>
+      <li class="ul_on_1"><a href="#">恶心的标的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶标恶心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题恶心心的标题题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心心的标题</a></li>
+      <li class="ul_on_1"><a href="#">恶心的心的标题</a></li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript">
+	var lis = document.getElementById("Tabs").getElementsByTagName("li");
+	var uls = document.getElementById("TabsCon").getElementsByTagName("ul");
+    (function(win){
+        /**
+         * 拓展
+         * @param  {[Object]} define [默认配置项]
+         * @param  {[Object]} source
+         * @return {[Object]}
+         */
+        var extend = function(define, source) {
+            for (var property in source) define[property] = source[property];
+            return define;
+        }
+        var gId = function(id){
+            return document.getElementById(id);
+        }
+        /**
+         * 默认配置
+         * @type {{tabs: NodeList, cons: NodeList}}
+         */
+        var defineConfig = {
+            tabs: gId('Tabs').getElementsByTagName("li"),
+            cons: gId('TabsCon').getElementsByTagName("ul"),
+            evt: 'click',
+            cls: 'cur'
+        }
+        var Tab = function(o){
+            this.tabs = o.tabs;
+            this.cons = o.cons;
+            this.evt = o.evt;
+            this.cls = o.cls;
+            this.init();
+        }
+        Tab.prototype = {
+            init: function(){
+                for(var i = 0, len = this.tabs.length; i < len; i++){
+                    this.tabs[i].setAttribute('data-tag',i);
+                    this._event(this.tabs[i]);
+                }
+            },
+            _event: function(obj){
+                var self = this;
+                obj['on'+this.evt] = function(){
+                    var n = this.getAttribute('data-tag');
+                    self.content(n);
+                }
+            },
+            content: function(num){
+                var self = this;
+                for(var i = 0, len = this.tabs.length; i < len; i++){
+                    if(i == num){
+                        self.addClass(self.tabs[i]);
+                        self.show(self.cons[i]);
+                    }else{
+                        self.removeClass(self.tabs[i]);
+                        self.hide(self.cons[i]);
+                    }
+                }
+            },
+            addClass: function(obj){
+                obj.className = this.cls;
+            },
+            removeClass: function(obj){
+                obj.className = '';
+            },
+            show: function(obj){
+                obj.style.display = 'block';
+            },
+            hide: function(obj){
+                obj.style.display = 'none';
+            }
+        }
+        win.tab = function(o){
+            o = extend(defineConfig, o);
+            new Tab(o);
+        }
+    }(this));
+    //运行
+    tab({
+        tabs: lis,
+        cons: uls,
+        evt: 'mouseover'
+    });
+</script>
+</body>
+</html>
