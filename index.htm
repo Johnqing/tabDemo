@@ -257,6 +257,11 @@ body {
             evt: 'click',
             cls: 'cur'
         }
+	/**
+	* 类开始
+	* @param o
+	* @constructor
+	*/
         var Tab = function(o){
             this.tabs = o.tabs;
             this.cons = o.cons;
@@ -303,6 +308,10 @@ body {
                 obj.style.display = 'none';
             }
         }
+        /**
+	* 接口释放
+	* @param o
+	*/
         win.tab = function(o){
             o = extend(defineConfig, o);
             new Tab(o);
