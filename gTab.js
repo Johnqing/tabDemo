@@ -9,8 +9,8 @@
   var TabClass = function(target, opts){
 		this.target = target;
 		this.settings = opts;
-		this.tabCon = $(opts.gTbox);
-		this.arr = $(opts.anim);
+		this.tabCon = target.find(opts.gTbox);
+		this.arr = target.find(opts.anim);
 			
 		this.init();
 	};
@@ -61,7 +61,9 @@
 	        cur: "cur", //hover样式名
 	        even: null //触发控件的其他响应事件
 	    };
-	    opts = $.extend(defaults, opts);
-	    new TabClass($(this), opts);
+	    opts = $.extend({}, defaults, opts);
+	    this.each(function(){
+	    	new TabClass($(this), opts);
+	    });
 	}    
 })(jQuery);
